@@ -1,0 +1,17 @@
+{
+    "name": "nep/dev-track",
+    "description": "The NEP Development Track aims at being a structured guide to the technical development of Software Engineers.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Nep\\DevTrack\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michiel Bakker",
+            "email": "michiel.bakker@nepgroup.com"
+        }
+    ],
+    "require": {}
+}
