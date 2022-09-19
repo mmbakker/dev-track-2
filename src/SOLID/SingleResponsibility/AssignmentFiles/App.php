@@ -13,7 +13,6 @@ class App
         echo "Welcome to the Pizza Maker!\n";
         echo "Let's start your order.\n";
 
-
         $order = new Order();
 
         $order->sauce = readline('Do you want [t]omato sauce or [b]arbecue sauce as base sauce for your pizza? (t/b) ');
