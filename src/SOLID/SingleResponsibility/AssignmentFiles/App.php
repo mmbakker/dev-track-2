@@ -36,10 +36,9 @@ class App
             exit;
         }
 
-        $oven = new PizzaOven();
-        $oven->bake($pizza);
+        $pizzaName = ucfirst($pizza->sauce) . ', ' . ($pizza->cheese ? 'with' : 'no') . ' cheese';
 
-        echo "Your pizza with {$pizza->sauce} and ", $pizza->cheese ? 'with' : 'without', " cheese is ready!\n";
+        echo "Your pizza, which we called \"{$pizzaName}\", is ready!\n";
         echo "\n";
     }
 }
