@@ -7,3 +7,11 @@ In this folder you'll find a number of files that simulate a process. The
 single responsibility principle has not been followed.
 
 Apply the single responsibility principle to add structure to the code.
+
+> Note that there might be multiple correct answers, and it is up to you
+> to determine which one you pick.
+> 
+> When done, discuss your solution with your coach. Make sure to motivate
+> your design decisions.
+
+> Pro tip: take notes of the feedback you get!
