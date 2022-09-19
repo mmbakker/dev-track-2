@@ -13,28 +13,26 @@ class App
         echo "Welcome to the Pizza Maker!\n";
         echo "Let's start your order.\n";
 
+
+        $order = new Order();
+
+        $order->sauce = readline('Do you want [t]omato sauce or [b]arbecue sauce as base sauce for your pizza? (t/b) ');
+
+        if (!in_array($order->sauce, ['t', 'b'])) {
+            echo "Invalid input\n";
+            exit;
+        }
+
+        $order->cheese = readline('Do you want cheese on your pizza? (y/n) ');
+
+        if (!in_array($order->cheese, ['y', 'n'])) {
+            echo "Invalid input\n";
+            exit;
+        }
+
         $pizza = new Pizza();
-
-        $response = readline('Do you want [t]omato sauce or [b]arbecue sauce as base sauce for your pizza? ');
-        if ($response === 't') {
-            $pizza->sauce = 'tomato sauce';
-        } elseif ($response === 'b') {
-            $pizza->sauce = 'barbecue sauce';
-        } else {
-            echo "Invalid input\n";
-            exit;
-        }
-
-        $response = readline('Do you want cheese on your pizza? (y/n) ');
-
-        if ($response === 'y') {
-            $pizza->cheese = true;
-        } elseif ($response === 'n') {
-            $pizza->cheese = false;
-        } else {
-            echo "Invalid input\n";
-            exit;
-        }
+        $pizza->sauce = ($order->sauce === 't' ? 'tomato sauce' : 'barbecue sauce');
+        $pizza->cheese = ($order->cheese === 'y');
 
         $pizzaName = ucfirst($pizza->sauce) . ', ' . ($pizza->cheese ? 'with' : 'no') . ' cheese';
 

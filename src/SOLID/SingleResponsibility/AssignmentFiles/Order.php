@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Nep\DevTrack\SOLID\SingleResponsibility\AssignmentFiles;
 
-class Pizza
+class Order
 {
-    public ?string $sauce = null;
-    public bool $cheese = false;
+    public string $sauce;
+    public string $cheese;
 }
