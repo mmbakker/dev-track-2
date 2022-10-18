@@ -13,5 +13,7 @@
             "email": "michiel.bakker@nepgroup.com"
         }
     ],
-    "require": {}
+    "require": {
+        "ext-readline": "*"
+    }
 }

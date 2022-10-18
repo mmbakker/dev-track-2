@@ -1,6 +1,6 @@
-# Single responsibility principle
-The single responsibility principle is all about making sure that each part
-of our source code serves a single purpose.
+# Single responsibility principle (the S in SOLID)
+The single responsibility principle is all about making sure that each part of our source code serves a single purpose:
+it must have one, and only one, reason to change.
 
 ## Assignment
 In this folder you'll find a number of files that simulate a process. The
@@ -14,4 +14,4 @@ Apply the single responsibility principle to add structure to the code.
 > When done, discuss your solution with your coach. Make sure to motivate
 > your design decisions.
 
-> Pro tip: take notes of the feedback you get!
+> Pro-tip: take notes of the feedback you get!
