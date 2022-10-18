@@ -10,33 +10,34 @@ class App
     {
         require_once __DIR__ . '/../../../../vendor/autoload.php';
 
-        echo "Welcome to the Pizza Maker!\n";
-        echo "Let's start your order.\n";
+        echo "Welcome to my Pizza Restaurant!\n";
+        echo "Let's start your order.\n\n";
 
         $order = new Order();
 
-        $order->sauce = readline('Do you want [t]omato sauce or [b]arbecue sauce as base sauce for your pizza? (t/b) ');
+        $order->sauce = self::prompt(
+            'Would you like [t]omato sauce or [b]arbecue sauce as base sauce for your pizza?',
+            ['t', 'b'],
+        );
 
-        if (!in_array($order->sauce, ['t', 'b'])) {
-            echo "Invalid input\n";
-            exit;
-        }
+        $order->cheese = self::prompt('Would you like cheese on your pizza?', ['y', 'n']);
 
-        $order->cheese = readline('Do you want cheese on your pizza? (y/n) ');
+        $pizza = Pizza::fromOrder($order);
 
-        if (!in_array($order->cheese, ['y', 'n'])) {
-            echo "Invalid input\n";
-            exit;
-        }
-
-        $pizza = new Pizza();
-        $pizza->sauce = ($order->sauce === 't' ? 'tomato sauce' : 'barbecue sauce');
-        $pizza->cheese = ($order->cheese === 'y');
-
-        $pizzaName = ucfirst($pizza->sauce) . ', ' . ($pizza->cheese ? 'with' : 'no') . ' cheese';
-
-        echo "Your pizza, which we called \"{$pizzaName}\", is ready!\n";
         echo "\n";
+        echo "Your pizza is ready!\n";
+        echo $pizza, "\n";
+    }
+
+    private static function prompt(string $message, array $options): string
+    {
+        $message .= ' (' . implode('/', $options) . ') ';
+
+        do {
+            $choice = readline($message);
+        } while (!$choice || (!in_array($choice, $options) && print("Invalid choice\n")));
+
+        return $choice;
     }
 }
 
