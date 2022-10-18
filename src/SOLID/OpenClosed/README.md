@@ -8,7 +8,7 @@ business rule, new feature, etc.), it should _not_ affect code _implementing_ th
 ## Assignment
 ### Messaging app
 In the [`AssignmentFiles` folder](./AssignmentFiles) you'll find a very simple app that prints out a fixed message. It
-consists of two files:
+consists of three files:
 * App.php – the main file that runs the example
 * Message.php – a model representing a message
 * Printer.php – a class containing business logic to format and print a message to the screen
