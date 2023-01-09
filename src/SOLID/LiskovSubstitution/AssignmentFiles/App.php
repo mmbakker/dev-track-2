@@ -24,7 +24,7 @@ class App
 
         $player->hit($enemy, 50);
 
-        // $player->hit($npc, 10);
+        $player->hit($npc, 10);
     }
 }
 

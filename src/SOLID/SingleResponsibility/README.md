@@ -20,7 +20,8 @@ This will ask you a number of questions, simulating an order in a pizza restaura
 
 While this code is reasonably readable, it does violate the Single Responsibility principle.
 
-### Improve the code
+### Applying the principle
+Let's say we want to add the 
 
 > **Assignment:** Make changes to the code to make it more in line with the Single Responsibility principle.
 
