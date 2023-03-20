@@ -10,7 +10,22 @@ class App
     {
         require_once __DIR__ . '/../../../../vendor/autoload.php';
 
-        // You code goes here.
+        $shapes = self::getShapes();
+
+        foreach ($shapes as $shape) {
+            printf("- %s - coordinates: (%d, %d)\n", $shape, $shape->getX(), $shape->getY());
+        }
+    }
+
+    /**
+     * @return array<ShapeInterface>
+     */
+    private static function getShapes(): array
+    {
+        return [
+            new Circle(1, 1, 10),
+            new Square(15, 15, 10),
+        ];
     }
 }
 
