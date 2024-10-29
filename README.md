@@ -1,8 +1,7 @@
 # Development Track
 
 This repository contains a number of practical assigments and coding challenges, with the goal of teaching common
-approaches to common problems found in the field of software engineering. Additionally, common tasks like installing
-Symfony and creating libraries/bundles will be demonstrated.
+approaches to common problems found in the field of software engineering.
 
 ## Software design patterns and -principles
 
