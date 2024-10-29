@@ -14,7 +14,7 @@ Find below the list of principles and patterns that are explained in this reposi
 * [Interface Segregation principle](./SOLID/InterfaceSegregation)
 * [Dependency Inversion principle](./SOLID/DependencyInversion)
 
-### Patterns
+### Patterns (WIP)
 * [Observer pattern](./Patterns/Observer)
 * [Factory pattern](./Patterns/Factory)
 * [Strategy pattern](./Patterns/Strategy)
